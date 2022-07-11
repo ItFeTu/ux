@@ -5,7 +5,7 @@ $( document ).ready(function() {$('.slider-content').owlCarousel({
     navText: ['<span class="btn-prev"><i class="icon-prev fas fa-chevron-left"></i><span>', '<span class="btn-next"><i class="icon-next fas fa-chevron-right"></i><span>'],
     navClass: ['owl-prev', 'owl-next'],
     autoplay: true,
-    autoplayTimeout:1000,
+    autoplayTimeout:5000,
     autoHeight:350,
     center: true,
     dots: false,
