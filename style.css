@@ -279,6 +279,7 @@ select {
     background-color: var(--back-color);
     border-radius: 2rem 2rem 0 0;
     color: var(--main-color);
+    text-align: center;
 }
 
 .main-content .menu-category .menu-category__title,
@@ -560,14 +561,17 @@ select {
 
 .product-main .selling{
     width: 70%;
-    /* border-radius: 2rem;
-    border: 0.1rem solid var(--sub-color); */
+    width: 70%;
+    border: 1px solid var(--sub-color);
+    border-radius: 2rem 2rem 0 0;
 }
 
 .product-main .selling .nav-pills{
     width: initial;
     background-color: var(--back-color);
     border-radius: 2rem 2rem 0 0;
+    border-bottom: 0.1rem solid var(--sub-color);
+    line-height: 1.2;
 }
 
 .product-main .selling .nav-link{
@@ -582,7 +586,6 @@ select {
     border-radius: 2rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border: 1px solid var(--sub-color);
 }
 
 .product-main .selling .tab-pane{
@@ -700,6 +703,7 @@ select {
 .nav__mobile .menu-category .menu-category__title{
     font-size: 2rem;
     margin: 1rem 0;
+    border-bottom: 0.1rem solid var(--sub-color);
 }
 
 .nav__mobile .menu-category a{
