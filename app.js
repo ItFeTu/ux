@@ -44,9 +44,9 @@ function handleBestSelling(width, products){
             
         }
         else{
+            element.classList.remove('product-item--col');
             const icon = thumbnail.querySelector('.icon-action');
             icon.remove();
-            element.classList.remove('product-item--col');
         }
     });
     
