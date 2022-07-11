@@ -1,3 +1,12 @@
+//responsive
+let width = window.innerWidth;
+const products = document.querySelectorAll('.best-selling__content .product-item');
+handleBestSelling(width, products);
+window.addEventListener('resize', function (e) {
+    width = window.innerWidth
+    handleBestSelling(width, products);
+    //to do in the afternoon
+});
 $(document).ready(function () {
     $('.slider-content').owlCarousel({
         loop: true,
@@ -30,7 +39,7 @@ $(document).ready(function () {
 function handleBestSelling(width, products) {
     products.forEach(element => {
         const thumbnail = element.querySelector('.thumbnail');
-        if (width < 1200 && width >= 768) {
+        if (width < 1200 && width >= 460) {
             element.classList.add('product-item--col');
             const tag = document.createElement("div");
             tag.classList.add('icon-action');
@@ -51,14 +60,6 @@ function handleBestSelling(width, products) {
     });
 
 }
-//responsive
-let width = window.innerWidth;
-const products = document.querySelectorAll('.best-selling__content .product-item');
-handleBestSelling(width, products);
-window.addEventListener('resize', function (e) {
-    width = window.innerWidth
-    handleBestSelling(width, products);
-    //to do in the afternoon
-});
+
 
 
