@@ -1,5 +1,11 @@
+/* for mobile minumum */
+@media screen and (max-width: 389.75px){
+    .product-main .product-item--col{
+        width: 100%;
+    }
+}
 /* For Mobile */
-@media screen and (max-width: 575.98px) {
+@media screen and (min-width: 390px) and  (max-width: 575.98px) {
 
     
     .header .container{
