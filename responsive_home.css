@@ -256,7 +256,7 @@
 }
 
 /* for mobile minumum */
-@media screen and (max-width: 389.75px){
+@media screen and (max-width: 319.75px){
     .product-main .product-item--col{
         width: 100%;
     }
