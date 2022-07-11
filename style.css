@@ -331,10 +331,13 @@ select {
 }
 
 /* products */
-.product-main .container{
+.product-main .product-main-wrap{
     display: flex;
     gap: 0 2rem;
 }
+
+
+
 .product-main .best-selling{
     width: 30%;
     border: 0.1rem solid var(--sub-color);
@@ -487,7 +490,8 @@ select {
 
 .product-main .product-item--col:hover{
     transition: all 0.5s ease 0s;
-    box-shadow: 10px 8px 10px 3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 10px 8px 10px 3px rgba(0, 0, 0, 0.1); */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .product-main .product-item--col:hover .thumbnail::after{
