@@ -169,6 +169,15 @@ select {
 }
 
 /* MenuMain */
+
+#nav-input{
+    display: none;
+}
+
+.menu-main .menu-bar-tablet{
+    display: none;
+}
+
 .menu-main{
     background-color: var(--back-color);
     color: var(--main-color);
@@ -242,6 +251,7 @@ select {
     justify-content: space-between;
     margin-top: 4rem;
     flex: 1;
+    gap: 1rem;
 }
 
 .main-content .slogan-content__item .icon-item{
@@ -311,6 +321,7 @@ select {
 
 .promotion-main .container{
     justify-content: space-around;
+    gap: 1rem;
     
 }
 
@@ -532,7 +543,7 @@ select {
     width: calc((100% / 3) - 2.5rem);
     flex-wrap: nowrap;
     align-items: center;
-    border: 0.1rem solid var(--back-color);
+    /* border: 0.1rem solid var(--back-color); */
     border-radius: 2rem!important;
 }
 
@@ -593,4 +604,182 @@ select {
     color: #fff;
 }
 
+/* nav mobile */
+.nav__mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 39rem;
+    max-width: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: 999;
+    box-shadow: 7px 1px 8px 0px rgba(0, 0, 0, 0.43);
+    -webkit-box-shadow: 7px 1px 8px 0px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 7px 1px 8px 0px rgba(0, 0, 0, 0.43);
+    transform: translateX(-105%);
+    transition: all linear .3s;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    z-index: 998;
+    display: none;
+    animation: fadeIn linear .2s;
+}
+
+.nav__mobile .close{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: #ccc;
+    z-index: 10000;
+}
+
+.nav__mobile label:hover{
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.nav__mobile .nav__content{
+    padding: 2rem;
+    position: relative;
+}
+
+.nav__mobile .nav__content .branch{
+    font-size: 2.4rem;
+    color: var(--main-color);
+    
+}
+
+.nav__mobile .nav__content .user{
+    display: flex;
+    margin: 3rem 0;
+    gap: 0rem 2rem;
+    align-items: center;
+}
+
+.nav__mobile .user div:hover,
+.nav__mobile .user .sign-out:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.nav__mobile .user .sign-out{
+    color: #999;
+    font-size: 2rem;
+}
+
+.nav__mobile .nav__content .login,
+.nav__mobile .nav__content .register,
+.nav__mobile .nav__content .logged{
+    display: flex;
+    gap: 0rem 1rem;
+}
+
+.nav__mobile .nav__content .logged{
+    align-items: center;
+}
+
+.nav__mobile .logged img{
+    width: 5rem;
+}
+
+.nav__mobile .logged p{
+    font-size: 2rem;
+}
+
+.nav__mobile .menu-category .menu-category__title{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.nav__mobile .menu-category a{
+    display: flex;
+    gap: 0rem 1rem;
+    padding: 1rem;
+}
+
+.nav__mobile .menu-category a:hover,
+.nav__mobile .nav_navbar li:hover{
+    color: var(--main-color);
+}
+
+.nav__mobile .nav_navbar .nav_navbar__title{
+    font-size: 2rem;
+}
+
+.nav__mobile .nav_navbar li{
+    padding: 1rem;
+}
+
+/* nav bottom */
+.nav__mobile__bottom{
+    z-index: 10;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #fff;
+    color: var(--main-color);
+    font-size: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* height: 5rem; */
+    padding: 1rem 0;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0px -2px 5px 0px rgba(254,98,110,0.2);
+    -webkit-box-shadow: 0px -2px 5px 0px rgba(254,98,110,0.2);
+    -moz-box-shadow: 0px -2px 5px 0px rgba(254,98,110,0.2);
+    
+    
+}
+
+.nav__mobile__bottom .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #999;
+    gap:.5rem;
+}
+
+.nav__mobile__bottom .item.active{
+    color: var(--main-color);
+    transform: scale(1.15);
+
+}
+.nav__mobile__bottom .item:hover{
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+#nav-input{
+    display: none;
+}
+
+#nav-input:checked ~ .overlay{
+    display: block;
+}
+
+#nav-input:checked ~ .nav__mobile{
+    transform: translateX(0);
+    transition: all .5 linear 0.5s;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0
+    }
+    to{
+        opacity:1
+    }
+}
 

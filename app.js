@@ -27,24 +27,38 @@ $(function() {
    
 })
 
-//set width for owlCarousel
-// const owlCarousel = document.querySelectorAll('.owl-item');
-// console.log(owlCarousel);
-// const sliderWidth =document.querySelector('.slider-content');
-// console.log(sliderWidth);
-// owlCarousel.forEach(element => {
-//     console.log("width " + sliderWidth.clientWidth);
-//     element.style.width = sliderWidth.clientWidth + 'px';
-// });
+function handleBestSelling(width, products){
+    products.forEach(element => {
+        const thumbnail = element.querySelector('.thumbnail');
+        if(width < 1200 && width >= 768){
+            element.classList.add('product-item--col');
+            const tag = document.createElement("div");
+            tag.classList.add('icon-action');
+            const html =`
+                <div class="icon-action__item"><i class="fa-solid fa-eye"></i></div>
+                <div class="icon-action__item"><i class="fa-solid fa-basket-shopping"></i></div>
+                <div class="icon-action__item"><i class="fa-solid fa-heart"></i></div>
+                `
+            tag.innerHTML = html;
+            thumbnail.appendChild(tag);
+            
+        }
+        else{
+            const icon = thumbnail.querySelector('.icon-action');
+            icon.remove();
+            element.classList.remove('product-item--col');
+        }
+    });
+    
+}
+//responsive
+let width = window.innerWidth;
+const products = document.querySelectorAll('.best-selling__content .product-item');
+handleBestSelling(width, products);
+window.addEventListener('resize', function (e)  {
+    width = window.innerWidth
+    handleBestSelling(width, products);
+    //to do in the afternoon
+  });
 
-// $(document).ready(function(){
-//     const owlCarousel = document.querySelectorAll('.owl-item');
-// console.log(owlCarousel);
-// const sliderWidth =document.querySelector('.slider-content');
-// console.log(sliderWidth);
-// owlCarousel.forEach(element => {
-//     console.log("width " + sliderWidth.clientWidth);
-//     element.style.width = sliderWidth.clientWidth + 'px';
-// });
-//   });
 
