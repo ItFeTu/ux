@@ -3,11 +3,6 @@
     .product-main .product-item--col{
         width: 100%;
     }
-}
-/* For Mobile */
-@media screen and (min-width: 390px) and  (max-width: 575.98px) {
-
-    
     .header .container{
         padding-right: 2rem;
     }
@@ -75,9 +70,7 @@
         margin-bottom: 2rem;
     }
 
-    .product-main .product-item--col{
-        width: calc((100% / 2) - 2.5rem);;
-    }
+    
 
     .nav__mobile {
         display: block;
@@ -257,6 +250,14 @@
             opacity:1
         }
     }
+}
+/* For Mobile */
+@media screen and (min-width: 390px) and  (max-width: 575.98px) {
+    .product-main .product-item--col{
+        width: calc((100% / 2) - 2.5rem);;
+    }
+    
+    
 
 }
 
